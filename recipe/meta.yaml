@@ -1,12 +1,12 @@
-{% set version = "0.4" %}
+{% set version = "0.5.1" %}
 
 package:
   name: bias_correction
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/b/bias-correction/bias_correction-{{ version }}.tar.gz
-  sha256: 969c0b77856ffa1dbd9cf5c827b937dd91abe3850b40a2044c994ffc91eeee06
+  url: https://pypi.org/packages/source/b/bias-correction/bias_correction-{{ version }}.tar.gz
+  sha256: 30f5dd611e44e13ae921b0fed2a435c468333fed7022727b68d4459df37a88a2
 
 build:
   number: 0
