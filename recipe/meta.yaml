@@ -9,17 +9,17 @@ source:
   sha256: 30f5dd611e44e13ae921b0fed2a435c468333fed7022727b68d4459df37a88a2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
     - xarray
@@ -27,6 +27,8 @@ requirements:
     - statsmodels
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - bias_correction
 
